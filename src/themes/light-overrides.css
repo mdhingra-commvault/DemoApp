@@ -1,0 +1,156 @@
+/* ─── Light mode overrides — map Tailwind hardcoded classes to Nova light tokens
+   Applies when no data-theme attribute is set (default light mode).
+   In dark mode, dark-overrides.css wins due to [data-theme="dark"] specificity.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── Page & layout ───────────────────────────────────────────────────────── */
+body,
+.min-h-screen {
+  background-color: var(--background) !important;           /* #F6F6F8 */
+  color: var(--text-color) !important;                      /* #2E2E2E */
+}
+
+/* ── White surfaces (cards, nav, panels) ─────────────────────────────────── */
+.bg-white {
+  background-color: var(--container-background) !important; /* #FFFEFF */
+}
+
+/* ── Slate backgrounds ───────────────────────────────────────────────────── */
+.bg-slate-50 {
+  background-color: var(--background) !important;           /* #F6F6F8 */
+}
+
+.bg-slate-100 {
+  background-color: var(--detail-background) !important;    /* #E8E8E8 */
+}
+
+.bg-slate-50\/50,
+.bg-slate-50\/40 {
+  background-color: var(--detail-background) !important;
+}
+
+/* ── Text colors ─────────────────────────────────────────────────────────── */
+.text-slate-900 {
+  color: var(--text-color) !important;                      /* #2E2E2E */
+}
+
+.text-slate-800 {
+  color: var(--text-color) !important;
+}
+
+.text-slate-700 {
+  color: var(--body-text-color) !important;
+}
+
+.text-slate-600 {
+  color: var(--body2-text-color) !important;                /* rgba(46,46,46,0.68) */
+}
+
+.text-slate-500 {
+  color: var(--input-disabled-text-color) !important;
+}
+
+.text-slate-400 {
+  color: var(--input-label-optional-text-color) !important; /* #8B8B8B */
+}
+
+/* ── Borders ─────────────────────────────────────────────────────────────── */
+.border-slate-200,
+.border-slate-100,
+.border-b,
+.border-b.border-slate-200,
+.border-b.border-slate-100 {
+  border-color: var(--grid-border-color) !important;        /* #DEDEDE */
+}
+
+.border-slate-50 {
+  border-color: var(--grid-border-color) !important;
+}
+
+.divide-y.divide-slate-100 > * + * {
+  border-top-color: var(--grid-border-color) !important;
+}
+
+/* ── Indigo → Nova primary purple ────────────────────────────────────────── */
+.text-indigo-600,
+.text-indigo-700 {
+  color: var(--primary-btn-color) !important;               /* #AB4CC8 */
+}
+
+.bg-indigo-600 {
+  background-color: var(--primary-btn-color) !important;
+}
+
+.hover\:bg-indigo-700:hover {
+  background-color: var(--primary-btn-hover-color) !important; /* #883ca0 */
+}
+
+.bg-indigo-50\/50,
+.bg-indigo-50 {
+  background-color: rgba(171, 76, 200, 0.08) !important;
+}
+
+.hover\:bg-indigo-50:hover {
+  background-color: rgba(171, 76, 200, 0.12) !important;
+}
+
+.border-indigo-200 {
+  border-color: rgba(171, 76, 200, 0.3) !important;
+}
+
+.border-indigo-100 {
+  border-color: rgba(171, 76, 200, 0.2) !important;
+}
+
+.border-indigo-500 {
+  border-color: var(--primary-btn-color) !important;
+}
+
+.hover\:border-indigo-200:hover {
+  border-color: rgba(171, 76, 200, 0.4) !important;
+}
+
+.ring-indigo-500\/10 {
+  --tw-ring-color: rgba(171, 76, 200, 0.1) !important;
+}
+
+.hover\:bg-indigo-50\/20:hover {
+  background-color: rgba(171, 76, 200, 0.06) !important;
+}
+
+.hover\:bg-indigo-500:hover {
+  background-color: var(--primary-btn-hover-color) !important;
+}
+
+/* ── Table header ────────────────────────────────────────────────────────── */
+thead tr.bg-slate-900 {
+  background-color: var(--grid-header-background) !important; /* #ECECEC */
+}
+
+thead tr.bg-slate-900 th {
+  color: var(--header-text-color) !important;               /* #2E2E2E */
+}
+
+.border-slate-800 {
+  border-color: var(--grid-border-color) !important;
+}
+
+/* ── Assessment floating bar ─────────────────────────────────────────────── */
+.bg-slate-900.text-white {
+  background-color: var(--container-background) !important;
+  border-color: var(--grid-border-color) !important;
+  color: var(--text-color) !important;
+}
+
+.border-slate-700 {
+  border-color: var(--grid-border-color) !important;
+}
+
+.bg-slate-700 {
+  background-color: var(--grid-border-color) !important;
+}
+
+/* ── Hover states ────────────────────────────────────────────────────────── */
+.hover\:border-slate-200:hover {
+  border-color: var(--grid-border-color) !important;
+}

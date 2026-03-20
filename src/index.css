@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── GalanoGrotesque — CC brand font ─────────────────────────────────────── */
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('/fonts/GalanoGrotesque-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('/fonts/GalanoGrotesque-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('/fonts/GalanoGrotesque-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('/fonts/GalanoGrotesque-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('/fonts/GalanoGrotesque-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Base typography — matches CC defaults ───────────────────────────────── */
+body {
+  font-family: var(--font-family-base);   /* GalanoGrotesque, sans-serif */
+  font-size: var(--font-size-base);       /* 14px */
+  font-weight: var(--font-weight-normal); /* 400 */
+  line-height: var(--line-height-base);   /* 1.5 */
+}

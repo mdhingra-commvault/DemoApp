@@ -1,0 +1,91 @@
+/* ─── Typography overrides — map Tailwind font classes to CC tokens ──────────
+   Applies in both light and dark modes (font tokens are theme-agnostic).
+   Arbitrary pixel sizes are bumped up by 1px to match CC's slightly larger
+   base scale (14px body vs Tailwind's 16px default).
+   Variable names use kebab-case to match CC's DOM convention.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── Font family ─────────────────────────────────────────────────────────── */
+.font-sans {
+  font-family: var(--font-family-base) !important; /* GalanoGrotesque, sans-serif */
+}
+
+/* ── Font weights ────────────────────────────────────────────────────────── */
+/* CC bold = 500 (Medium), xbold = 700 (Bold), black = 900 */
+.font-medium {
+  font-weight: var(--font-weight-bold) !important;  /* 500 — CC's standard bold */
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold) !important;  /* 500 — CC uses 500 for bold, not 700 */
+}
+
+.font-black {
+  font-weight: 500 !important; /* GalanoGrotesque-Black — no CC token, but file is loaded */
+}
+
+/* ── Font sizes — standard Tailwind scale mapped to CC tokens ────────────── */
+.text-xs {
+  font-size: var(--font-size-sm) !important; /* ~13px — CC's smallest token, closest to Tailwind's 12px */
+}
+
+.text-base {
+  font-size: var(--font-size-md) !important; /* ~15px — CC's mid token, closest to Tailwind's 16px */
+}
+
+.text-sm {
+  font-size: var(--font-size-sm) !important; /* ~13px */
+}
+
+.text-lg {
+  font-size: var(--font-size-lg) !important; /* ~16px */
+}
+
+.text-xl {
+  font-size: var(--h4-font-size) !important;  /* 1.143em ~16px */
+}
+
+.text-2xl {
+  font-size: var(--h3-font-size) !important;  /* 1.286em ~18px */
+}
+
+.text-4xl {
+  font-size: var(--h1-font-size) !important;  /* 1.714em ~24px */
+}
+
+/* ── Table font — matches CC grid sizing exactly ─────────────────────────── */
+/* Tailwind Preflight resets table elements to 100% of html (16px),          */
+/* bypassing body's 14px. This restores CC grid row sizing.                  */
+table,
+thead,
+tbody,
+tr,
+td {
+  font-size: var(--font-size-sm);        /* 0.92857em ≈ 13px — CC grid row size */
+  font-weight: var(--font-weight-normal)!important; /* 400 — CC grid row weight */
+}
+
+/* CC grid column headers use bold (500), not normal */
+th {
+  font-size: var(--font-size-sm);        /* 0.92857em ≈ 13px — same size as rows */
+  font-weight: var(--font-weight-bold);  /* 500 — CC grid header weight */
+}
+
+/* ── Arbitrary pixel sizes — bumped +1px to match CC's 14px base scale ───── */
+.text-\[9px\]  { font-size: 10px !important; }
+.text-\[10px\] { font-size: 11px !important; }
+.text-\[11px\] { font-size: 12px !important; }
+.text-\[12px\] { font-size: 13px !important; } /* aligns with CC font-size-sm */
+
+/* ── Line heights ────────────────────────────────────────────────────────── */
+.leading-relaxed {
+  line-height: calc(var(--line-height-base) * 1.2) !important; /* ~1.8 */
+}
+
+.leading-tight {
+  line-height: calc(var(--line-height-base) * 0.85) !important; /* ~1.275 */
+}
+
+.leading-snug {
+  line-height: calc(var(--line-height-base) * 0.925) !important; /* ~1.39 */
+}

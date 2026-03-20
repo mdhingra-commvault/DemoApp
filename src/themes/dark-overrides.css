@@ -1,0 +1,243 @@
+/* ─── Dark mode overrides for Tailwind hardcoded classes ─────────────────────
+   Activated when <html data-theme="dark"> is set by useTheme.js.
+   Maps the app's Tailwind utility classes to CC dark theme CSS variables.
+   Variable names match CC's DOM convention: kebab-case (--container-background)
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── Font family — force GalanoGrotesque (Nova dark defaults to Noto Sans) ── */
+[data-theme="dark"] {
+  --font-family-base: GalanoGrotesque, sans-serif;
+}
+
+/* ── Commvault logo — invert to white in dark mode ───────────────────────── */
+[data-theme="dark"] .commvault-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* ── Page & layout ───────────────────────────────────────────────────────── */
+[data-theme="dark"] body,
+[data-theme="dark"] .min-h-screen {
+  background-color: var(--background) !important;
+  color: var(--text-color) !important;
+}
+
+/* ── White surfaces (cards, nav, panels, active tab pill) ────────────────── */
+[data-theme="dark"] .bg-white {
+  background-color: var(--container-background) !important;
+}
+
+/* ── Slate backgrounds ───────────────────────────────────────────────────── */
+[data-theme="dark"] .bg-slate-50 {
+  background-color: var(--background) !important;
+}
+
+[data-theme="dark"] .bg-slate-100 {
+  background-color: var(--detail-background) !important;
+}
+
+/* Tailwind opacity modifier variants */
+[data-theme="dark"] .bg-slate-50\/50 {
+  background-color: var(--detail-background) !important;
+}
+
+[data-theme="dark"] .bg-slate-50\/40 {
+  background-color: var(--detail-background) !important;
+}
+
+/* ── Text colors ─────────────────────────────────────────────────────────── */
+[data-theme="dark"] .text-slate-900 {
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .text-slate-800 {
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .text-slate-700 {
+  color: var(--body-text-color) !important;
+}
+
+[data-theme="dark"] .text-slate-600 {
+  color: var(--body2-text-color) !important;
+}
+
+[data-theme="dark"] .text-slate-500 {
+  color: var(--input-disabled-text-color) !important;
+}
+
+[data-theme="dark"] .text-slate-400 {
+  color: var(--input-icon-color) !important;
+}
+
+/* ── Borders ─────────────────────────────────────────────────────────────── */
+[data-theme="dark"] .border-slate-200 {
+  border-color: var(--base-border-color) !important;
+}
+
+[data-theme="dark"] .border-slate-100 {
+  border-color: var(--base-border-color) !important;
+}
+
+[data-theme="dark"] .border-slate-50 {
+  border-color: var(--grid-border-color) !important;
+}
+
+[data-theme="dark"] .border-b,
+[data-theme="dark"] .border-b.border-slate-200,
+[data-theme="dark"] .border-b.border-slate-100 {
+  border-color: var(--base-border-color) !important;
+}
+
+/* Table row dividers */
+[data-theme="dark"] .divide-y.divide-slate-100 > * + * {
+  border-top-color: var(--base-border-color) !important;
+}
+
+/* ── Indigo brand / accent ───────────────────────────────────────────────── */
+
+/* Logo badge & primary buttons keep indigo-600 — good contrast in dark */
+/* Active nav tab text & icons */
+[data-theme="dark"] .text-indigo-600 {
+  color: var(--primary-btn-color) !important;
+}
+
+[data-theme="dark"] .text-indigo-700 {
+  color: var(--primary-btn-color) !important;
+}
+
+/* Indigo-tinted section backgrounds (AI advisor, section headers) */
+[data-theme="dark"] .bg-indigo-50\/50 {
+  background-color: rgba(99, 181, 246, 0.08) !important;
+}
+
+[data-theme="dark"] .bg-indigo-50 {
+  background-color: rgba(99, 181, 246, 0.1) !important;
+}
+
+[data-theme="dark"] .hover\:bg-indigo-50:hover {
+  background-color: rgba(99, 181, 246, 0.12) !important;
+}
+
+[data-theme="dark"] .border-indigo-200 {
+  border-color: rgba(171, 76, 200, 0.3) !important;
+}
+
+[data-theme="dark"] .border-indigo-100 {
+  border-color: rgba(171, 76, 200, 0.2) !important;
+}
+
+[data-theme="dark"] .hover\:border-indigo-200:hover {
+  border-color: rgba(99, 181, 246, 0.4) !important;
+}
+
+/* Active assessment scoring button border */
+[data-theme="dark"] .border-indigo-500 {
+  border-color: var(--primary-btn-color) !important;
+}
+
+/* Active assessment scoring button ring */
+[data-theme="dark"] .ring-indigo-50 {
+  --tw-ring-color: rgba(99, 181, 246, 0.1) !important;
+}
+
+[data-theme="dark"] .ring-indigo-500\/10 {
+  --tw-ring-color: rgba(99, 181, 246, 0.1) !important;
+}
+
+/* Table row hover */
+[data-theme="dark"] .hover\:bg-indigo-50\/20:hover {
+  background-color: rgba(99, 181, 246, 0.06) !important;
+}
+
+/* Finalize Report button hover */
+[data-theme="dark"] .hover\:bg-indigo-500:hover {
+  background-color: var(--primary-btn-hover-color) !important;
+}
+
+/* ── Status / semantic badge colors ─────────────────────────────────────── */
+
+/* Red — Critical / Vulnerable */
+[data-theme="dark"] .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+}
+
+[data-theme="dark"] .bg-red-100 {
+  background-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+[data-theme="dark"] .text-red-700 {
+  color: #fca5a5 !important;
+}
+
+[data-theme="dark"] .border-red-100 {
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Green — Optimized / Validated */
+[data-theme="dark"] .bg-green-50 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+[data-theme="dark"] .text-green-700 {
+  color: #6ee7b7 !important;
+}
+
+[data-theme="dark"] .text-green-600 {
+  color: #6ee7b7 !important;
+}
+
+[data-theme="dark"] .border-green-100 {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Orange — High Risk */
+[data-theme="dark"] .bg-orange-100 {
+  background-color: rgba(249, 115, 22, 0.2) !important;
+}
+
+[data-theme="dark"] .text-orange-700 {
+  color: #fdba74 !important;
+}
+
+/* ── Table header (bg-slate-900) ─────────────────────────────────────────── */
+/* Keep dark but adjust to theme's header color so it doesn't blend with page */
+[data-theme="dark"] thead tr.bg-slate-900 {
+  background-color: var(--header-color) !important;
+}
+
+[data-theme="dark"] thead tr.bg-slate-900 th {
+  color: var(--header-text-color) !important;
+}
+
+[data-theme="dark"] .border-slate-800 {
+  border-color: var(--base-border-color) !important;
+}
+
+/* ── Assessment floating bar (bg-slate-900) ──────────────────────────────── */
+[data-theme="dark"] .bg-slate-900.text-white {
+  background-color: var(--container-background) !important;
+  border-color: var(--base-border-color) !important;
+}
+
+[data-theme="dark"] .border-slate-700 {
+  border-color: var(--base-border-color) !important;
+}
+
+/* Vertical divider inside floating bar */
+[data-theme="dark"] .bg-slate-700 {
+  background-color: var(--base-border-color) !important;
+}
+
+/* ── Hover states ────────────────────────────────────────────────────────── */
+[data-theme="dark"] .hover\:border-slate-200:hover {
+  border-color: var(--base-border-color) !important;
+}
+
+/* ── Radar chart inline colors ───────────────────────────────────────────── */
+/* Recharts uses inline SVG attributes — these can't be overridden via CSS.  */
+/* The grid lines and axis labels keep their hardcoded colors in dark mode.  */
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────── */
+[data-theme="dark"] * {
+  scrollbar-color: var(--scrollbar-thumb-background) var(--scrollbar-track-background);
+}
